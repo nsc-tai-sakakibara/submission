@@ -4,7 +4,7 @@ setLocal EnableDelayedExpansion
 set x=1
 
 FOR %%i in (*.txt) DO (
-    rename %%i ƒtƒ@ƒCƒ‹!x!.txt
+    rename %%i ãƒ•ã‚¡ã‚¤ãƒ«!x!.txt
     set /a x+=1
 )
 
