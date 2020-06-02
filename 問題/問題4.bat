@@ -2,6 +2,6 @@
 
 cd Downloads
 
-dir > downloads.txt
+dir/B > downloads.txt
 
 pause

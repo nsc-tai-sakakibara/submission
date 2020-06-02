@@ -6,6 +6,6 @@ cd
 
 dir /B
 
-ipconfig
+ipconfig | find "IPv4"
 
 pause
