@@ -259,20 +259,83 @@ def getPrice(price,tax=1.08)
 #可変長引数 可変長引数はタプル型
 print(keisan(1,2,3,4,5,mode="+"))
 
+#無名関数
+Lambda
+#関数型の変数に代入して利用する
+#returnはない
+def keisan(*kazu,mode):
+    total=0
+    if mode=="+":
+        for i in kazu:
+            total+=i
+    if mode=="-":
+        for i in kazu:
+        total -=i
+    return total
+print(keisan(1,2,3,4,5,mode="+"))
+print(keisan(1,2,3,4,5,mode="-"))
+
+#変数＝lambda 引数,引数（＝デフォルト値）　： 条件
+bigger=lambda kazu1,kazu2:kazu1 if kazu1 > kazu2 else kazu2
+print(bigger(10,4))
+
+
 #map関数
 #リストと関数を与えて処理をする関数
 #fiter関数
 #リストの中身を条件を指定して取得する関数
 
+class TeamA:
+    #初期化メソッド
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+        TeamA.member+=1
+    def getBornYear(self):
+            #self.変数名　フィールドメンバ
+            return 2019-self.age
+#インスタンス変数の追加
+TeamA.teamName = "ウルトラチーム"
+
+def getBlood(self):
+    return self.blood
+#self ではなく　TeamA
+TeamA.getBlood=getBlood
 
 
+#import ファイル名　拡張子は要らない
+
+#from ファイル名　import クラス名
+
+#プロパティ
+name=property(get_name)
+
+#普通に呼ばれる
+if __naem__=="__main__"
 
 
+#スーパークラスへのアクセス
+super().メソッド名
 
+class Animal:
+    def _init_(self,animal_type, tall):
+        self._animal_type = animal_type
+        self._tall = tall
+    def getAnimalType(self):
+        return self._animal_type
+    def getTall(self):
+        return self._tall
+    animal_type = property(getAnimalType)
+    tall = propertyCgetTall)
+    
+class Human(Animal):
+    def _init_(self,animal_type, tall):
+        super()._init_(animal_type,tall)
+    def aisatsu(self):
+        print("こんにちは")
 
-
-
-
-
-
-
+lion = Animal("ライオン",50)
+print(lion.animal_type+":"+str(lion.tall)+"cm")
+izawa = Human("人間",181)
+print(izawa.animal_type+":"+str(izawa.tall)+"cm")
+izawa.aisatsu()
