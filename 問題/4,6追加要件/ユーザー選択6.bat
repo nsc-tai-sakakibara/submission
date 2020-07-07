@@ -13,7 +13,7 @@ set /P file="ファイル名："
 set x=1
 
 FOR %%i in (%pass%.%format%) DO (
-    rename %%i %file%!x!%format%
+    rename %%i %file%!x!.%format%
     set /a x+=1
 )
 
